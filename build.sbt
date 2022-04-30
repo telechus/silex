@@ -31,7 +31,7 @@ lazy val silex = project
     Compile / doc / target := baseDirectory.value / "docs",
 
     libraryDependencies ++= Seq(
-      "org.scalatest" %% "scalatest" % "3.2.9" % Test,
+      "org.scalatest" %% "scalatest" % "3.2.12" % Test,
     ),
 
     licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
