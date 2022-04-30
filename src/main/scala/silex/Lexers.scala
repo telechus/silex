@@ -173,7 +173,7 @@ trait Lexers extends RegExps with Zippers {
               }
 
               if (buffer.nonEmpty) {
-                it.addAll(buffer)
+                it.addAll(buffer.toSeq)
               }
 
               it.end()
@@ -186,7 +186,7 @@ trait Lexers extends RegExps with Zippers {
                 buffer += token
 
                 if (buffer.size >= batchSize) {
-                  it.addAll(buffer)
+                  it.addAll(buffer.toSeq)
                   buffer.clear()
                 }
               }
@@ -201,7 +201,7 @@ trait Lexers extends RegExps with Zippers {
 
                 if (stopOnError) {
                   if (buffer.nonEmpty) {
-                    it.addAll(buffer)
+                    it.addAll(buffer.toSeq)
                   }
 
                   it.end()
@@ -209,7 +209,7 @@ trait Lexers extends RegExps with Zippers {
                   return
                 }
                 else if (buffer.size >= batchSize) {
-                  it.addAll(buffer)
+                  it.addAll(buffer.toSeq)
                   buffer.clear()
                 }
               }

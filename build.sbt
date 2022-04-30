@@ -1,8 +1,11 @@
 
+val scala212Version = "2.12.15"
+val scala213Version = "2.13.8"
+
 val commonSettings = Seq(
   version            := "0.6",
-  scalaVersion       := "3.2.0",
-  crossScalaVersions := Seq("2.12.13", "2.13.4", "3.0.1", "3.2.0"),
+  scalaVersion       := scala213Version,
+  crossScalaVersions := Seq(scala212Version, scala213Version),
   organization       := "ch.epfl.lara",
 )
 
@@ -31,11 +34,6 @@ lazy val silex = project
       "org.scalatest" %% "scalatest" % "3.2.9" % Test,
     ),
 
-//    bintrayOrganization := Some("epfl-lara"),
-//    licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
-//    bintrayPackageLabels := Seq(
-//      "scala", "lexer", "lexing"
-//    ),
     licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
 
   )
