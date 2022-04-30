@@ -6,7 +6,7 @@ val commonSettings = Seq(
   version            := "0.6",
   scalaVersion       := scala213Version,
   crossScalaVersions := Seq(scala212Version, scala213Version),
-  organization       := "ch.epfl.lara",
+  organization       := "dev.procgen",
 )
 
 lazy val silex = project
