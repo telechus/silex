@@ -3,7 +3,6 @@ val scala212Version = "2.12.15"
 val scala213Version = "2.13.8"
 
 val commonSettings = Seq(
-  version            := "0.6.0",
   scalaVersion       := scala213Version,
   crossScalaVersions := Seq(scala212Version, scala213Version),
   organization       := "dev.procgen",
